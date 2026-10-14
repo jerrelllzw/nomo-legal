@@ -1,0 +1,40 @@
+:root {
+  --paper: #FAF6F0;
+  --ink: #241F1C;
+  --rust: #B04828;
+  --muted: #72675C;
+  --rule: #E6DCCF;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1C1815;
+    --ink: #F1E9DF;
+    --rust: #E58A68;
+    --muted: #B3A698;
+    --rule: #3A322C;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.6 "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 4px; }
+h2 { font-size: 1.15rem; margin: 2rem 0 0.4rem; color: var(--rust); text-transform: uppercase; letter-spacing: 0.06em; }
+p, li { max-width: 68ch; }
+a { color: var(--rust); }
+.meta { color: var(--muted); margin: 0 0 1.5rem; }
+.draft {
+  border: 2px solid var(--rust);
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin: 0 0 1.5rem;
+}
+.todo { background: color-mix(in srgb, var(--rust) 18%, transparent); padding: 0 4px; border-radius: 4px; }
+nav { margin-bottom: 1.5rem; }
+nav a { margin-right: 1rem; }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.9rem; }
